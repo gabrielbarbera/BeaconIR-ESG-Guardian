@@ -12,7 +12,8 @@ export default function DemoPage() {
   };
 
   // ESG Guardian component structure
-  const components = [
+  // Define as const to ensure it's properly typed during static generation
+  const components: Array<{ type: string; props?: any }> = [
     { type: "hero", props: { metrics: { marketCap: mockCompany.marketCap, ticker: mockCompany.tickerSymbol } } },
     { type: "pillars", props: { pillars: mockPillars } },
     { type: "governance", props: { governance: mockGovernance } },
